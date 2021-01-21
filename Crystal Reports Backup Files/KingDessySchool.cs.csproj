@@ -1,0 +1,954 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DB1E3418-B690-45CA-9E0A-0D4906635C7C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>KingDessySchool.cs</RootNamespace>
+    <AssemblyName>KingDessySchool.cs</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\..\..\..\Downloads\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="attendnce.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="attendnce.Designer.cs">
+      <DependentUpon>attendnce.cs</DependentUpon>
+    </Compile>
+    <Compile Include="classrooms.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="classrooms.designer.cs">
+      <DependentUpon>classrooms.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DessySoftDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DessySoftDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DessySoftDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DessySoftDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DessySoftDataSet10.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DessySoftDataSet10.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DessySoftDataSet11.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DessySoftDataSet11.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DessySoftDataSet12.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DessySoftDataSet12.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DessySoftDataSet13.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DessySoftDataSet13.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DessySoftDataSet14.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DessySoftDataSet14.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DessySoftDataSet15.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DessySoftDataSet15.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DessySoftDataSet16.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DessySoftDataSet16.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DessySoftDataSet17.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DessySoftDataSet17.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DessySoftDataSet18.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DessySoftDataSet18.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DessySoftDataSet19.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DessySoftDataSet19.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DessySoftDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DessySoftDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DessySoftDataSet20.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DessySoftDataSet20.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DessySoftDataSet21.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DessySoftDataSet21.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DessySoftDataSet22.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DessySoftDataSet22.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DessySoftDataSet23.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DessySoftDataSet23.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DessySoftDataSet24.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DessySoftDataSet24.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DessySoftDataSet25.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DessySoftDataSet25.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DessySoftDataSet26.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DessySoftDataSet26.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DessySoftDataSet27.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DessySoftDataSet27.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DessySoftDataSet28.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DessySoftDataSet28.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DessySoftDataSet29.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DessySoftDataSet29.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DessySoftDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DessySoftDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DessySoftDataSet30.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DessySoftDataSet30.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DessySoftDataSet31.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DessySoftDataSet31.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DessySoftDataSet32.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DessySoftDataSet32.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DessySoftDataSet33.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DessySoftDataSet33.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DessySoftDataSet34.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DessySoftDataSet34.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DessySoftDataSet35.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DessySoftDataSet35.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DessySoftDataSet36.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DessySoftDataSet36.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DessySoftDataSet37.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DessySoftDataSet37.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DessySoftDataSet38.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DessySoftDataSet38.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DessySoftDataSet39.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DessySoftDataSet39.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DessySoftDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DessySoftDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DessySoftDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DessySoftDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DessySoftDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DessySoftDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DessySoftDataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DessySoftDataSet7.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DessySoftDataSet8.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DessySoftDataSet8.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DessySoftDataSet9.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DessySoftDataSet9.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Employees.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employees.Designer.cs">
+      <DependentUpon>Employees.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fees.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fees.Designer.cs">
+      <DependentUpon>fees.cs</DependentUpon>
+    </Compile>
+    <Compile Include="feesReceiptsx.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>feesReceiptsx.rpt</DependentUpon>
+    </Compile>
+    <Compile Include="FindPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FindPassword.Designer.cs">
+      <DependentUpon>FindPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Grade1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Grade1.designer.cs">
+      <DependentUpon>Grade1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Library.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Library.Designer.cs">
+      <DependentUpon>Library.cs</DependentUpon>
+    </Compile>
+    <Compile Include="login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="login.designer.cs">
+      <DependentUpon>login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainWindow.designer.cs">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindowX.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainWindowX.Designer.cs">
+      <DependentUpon>MainWindowX.cs</DependentUpon>
+    </Compile>
+    <Compile Include="map.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>map.rpt</DependentUpon>
+    </Compile>
+    <Compile Include="omagaconnections.cs" />
+    <Compile Include="OptionWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OptionWindow.Designer.cs">
+      <DependentUpon>OptionWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="profile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="profile.Designer.cs">
+      <DependentUpon>profile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReceiptFees.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReceiptFees.Designer.cs">
+      <DependentUpon>ReceiptFees.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegisterStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegisterStudent.designer.cs">
+      <DependentUpon>RegisterStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegisterStudentX.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegisterStudentX.Designer.cs">
+      <DependentUpon>RegisterStudentX.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegUser.Designer.cs">
+      <DependentUpon>RegUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StdFees.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StdFees.Designer.cs">
+      <DependentUpon>StdFees.cs</DependentUpon>
+    </Compile>
+    <Compile Include="subjects.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="subjects.Designer.cs">
+      <DependentUpon>subjects.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TAttendanceC1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TAttendanceC1.Designer.cs">
+      <DependentUpon>TAttendanceC1.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="attendnce.resx">
+      <DependentUpon>attendnce.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="classrooms.resx">
+      <DependentUpon>classrooms.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employees.resx">
+      <DependentUpon>Employees.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fees.resx">
+      <DependentUpon>fees.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="feesReceiptsx.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>feesReceiptsx.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FindPassword.resx">
+      <DependentUpon>FindPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Grade1.resx">
+      <DependentUpon>Grade1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Library.resx">
+      <DependentUpon>Library.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="login.resx">
+      <DependentUpon>login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainWindow.resx">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainWindowX.resx">
+      <DependentUpon>MainWindowX.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="map.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>map.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OptionWindow.resx">
+      <DependentUpon>OptionWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="profile.resx">
+      <DependentUpon>profile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ReceiptFees.resx">
+      <DependentUpon>ReceiptFees.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegisterStudent.resx">
+      <DependentUpon>RegisterStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegisterStudentX.resx">
+      <DependentUpon>RegisterStudentX.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegUser.resx">
+      <DependentUpon>RegUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StdFees.resx">
+      <DependentUpon>StdFees.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="subjects.resx">
+      <DependentUpon>subjects.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TAttendanceC1.resx">
+      <DependentUpon>TAttendanceC1.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="DessySoftDataSet.xsc">
+      <DependentUpon>DessySoftDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DessySoftDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DessySoftDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DessySoftDataSet.xss">
+      <DependentUpon>DessySoftDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DessySoftDataSet1.xsc">
+      <DependentUpon>DessySoftDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DessySoftDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DessySoftDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DessySoftDataSet1.xss">
+      <DependentUpon>DessySoftDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DessySoftDataSet10.xsc">
+      <DependentUpon>DessySoftDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="DessySoftDataSet10.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DessySoftDataSet10.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DessySoftDataSet10.xss">
+      <DependentUpon>DessySoftDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="DessySoftDataSet11.xsc">
+      <DependentUpon>DessySoftDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="DessySoftDataSet11.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DessySoftDataSet11.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DessySoftDataSet11.xss">
+      <DependentUpon>DessySoftDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="DessySoftDataSet12.xsc">
+      <DependentUpon>DessySoftDataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="DessySoftDataSet12.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DessySoftDataSet12.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DessySoftDataSet12.xss">
+      <DependentUpon>DessySoftDataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="DessySoftDataSet13.xsc">
+      <DependentUpon>DessySoftDataSet13.xsd</DependentUpon>
+    </None>
+    <None Include="DessySoftDataSet13.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DessySoftDataSet13.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DessySoftDataSet13.xss">
+      <DependentUpon>DessySoftDataSet13.xsd</DependentUpon>
+    </None>
+    <None Include="DessySoftDataSet14.xsc">
+      <DependentUpon>DessySoftDataSet14.xsd</DependentUpon>
+    </None>
+    <None Include="DessySoftDataSet14.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DessySoftDataSet14.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DessySoftDataSet14.xss">
+      <DependentUpon>DessySoftDataSet14.xsd</DependentUpon>
+    </None>
+    <None Include="DessySoftDataSet15.xsc">
+      <DependentUpon>DessySoftDataSet15.xsd</DependentUpon>
+    </None>
+    <None Include="DessySoftDataSet15.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DessySoftDataSet15.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DessySoftDataSet15.xss">
+      <DependentUpon>DessySoftDataSet15.xsd</DependentUpon>
+    </None>
+    <None Include="DessySoftDataSet16.xsc">
+      <DependentUpon>DessySoftDataSet16.xsd</DependentUpon>
+    </None>
+    <None Include="DessySoftDataSet16.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DessySoftDataSet16.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DessySoftDataSet16.xss">
+      <DependentUpon>DessySoftDataSet16.xsd</DependentUpon>
+    </None>
+    <None Include="DessySoftDataSet17.xsc">
+      <DependentUpon>DessySoftDataSet17.xsd</DependentUpon>
+    </None>
+    <None Include="DessySoftDataSet17.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DessySoftDataSet17.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DessySoftDataSet17.xss">
+      <DependentUpon>DessySoftDataSet17.xsd</DependentUpon>
+    </None>
+    <None Include="DessySoftDataSet18.xsc">
+      <DependentUpon>DessySoftDataSet18.xsd</DependentUpon>
+    </None>
+    <None Include="DessySoftDataSet18.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DessySoftDataSet18.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DessySoftDataSet18.xss">
+      <DependentUpon>DessySoftDataSet18.xsd</DependentUpon>
+    </None>
+    <None Include="DessySoftDataSet19.xsc">
+      <DependentUpon>DessySoftDataSet19.xsd</DependentUpon>
+    </None>
+    <None Include="DessySoftDataSet19.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DessySoftDataSet19.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DessySoftDataSet19.xss">
+      <DependentUpon>DessySoftDataSet19.xsd</DependentUpon>
+    </None>
+    <None Include="DessySoftDataSet2.xsc">
+      <DependentUpon>DessySoftDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="DessySoftDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DessySoftDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DessySoftDataSet2.xss">
+      <DependentUpon>DessySoftDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="DessySoftDataSet20.xsc">
+      <DependentUpon>DessySoftDataSet20.xsd</DependentUpon>
+    </None>
+    <None Include="DessySoftDataSet20.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DessySoftDataSet20.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DessySoftDataSet20.xss">
+      <DependentUpon>DessySoftDataSet20.xsd</DependentUpon>
+    </None>
+    <None Include="DessySoftDataSet21.xsc">
+      <DependentUpon>DessySoftDataSet21.xsd</DependentUpon>
+    </None>
+    <None Include="DessySoftDataSet21.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DessySoftDataSet21.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DessySoftDataSet21.xss">
+      <DependentUpon>DessySoftDataSet21.xsd</DependentUpon>
+    </None>
+    <None Include="DessySoftDataSet22.xsc">
+      <DependentUpon>DessySoftDataSet22.xsd</DependentUpon>
+    </None>
+    <None Include="DessySoftDataSet22.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DessySoftDataSet22.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DessySoftDataSet22.xss">
+      <DependentUpon>DessySoftDataSet22.xsd</DependentUpon>
+    </None>
+    <None Include="DessySoftDataSet23.xsc">
+      <DependentUpon>DessySoftDataSet23.xsd</DependentUpon>
+    </None>
+    <None Include="DessySoftDataSet23.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DessySoftDataSet23.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DessySoftDataSet23.xss">
+      <DependentUpon>DessySoftDataSet23.xsd</DependentUpon>
+    </None>
+    <None Include="DessySoftDataSet24.xsc">
+      <DependentUpon>DessySoftDataSet24.xsd</DependentUpon>
+    </None>
+    <None Include="DessySoftDataSet24.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DessySoftDataSet24.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DessySoftDataSet24.xss">
+      <DependentUpon>DessySoftDataSet24.xsd</DependentUpon>
+    </None>
+    <None Include="DessySoftDataSet25.xsc">
+      <DependentUpon>DessySoftDataSet25.xsd</DependentUpon>
+    </None>
+    <None Include="DessySoftDataSet25.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DessySoftDataSet25.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DessySoftDataSet25.xss">
+      <DependentUpon>DessySoftDataSet25.xsd</DependentUpon>
+    </None>
+    <None Include="DessySoftDataSet26.xsc">
+      <DependentUpon>DessySoftDataSet26.xsd</DependentUpon>
+    </None>
+    <None Include="DessySoftDataSet26.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DessySoftDataSet26.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DessySoftDataSet26.xss">
+      <DependentUpon>DessySoftDataSet26.xsd</DependentUpon>
+    </None>
+    <None Include="DessySoftDataSet27.xsc">
+      <DependentUpon>DessySoftDataSet27.xsd</DependentUpon>
+    </None>
+    <None Include="DessySoftDataSet27.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DessySoftDataSet27.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DessySoftDataSet27.xss">
+      <DependentUpon>DessySoftDataSet27.xsd</DependentUpon>
+    </None>
+    <None Include="DessySoftDataSet28.xsc">
+      <DependentUpon>DessySoftDataSet28.xsd</DependentUpon>
+    </None>
+    <None Include="DessySoftDataSet28.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DessySoftDataSet28.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DessySoftDataSet28.xss">
+      <DependentUpon>DessySoftDataSet28.xsd</DependentUpon>
+    </None>
+    <None Include="DessySoftDataSet29.xsc">
+      <DependentUpon>DessySoftDataSet29.xsd</DependentUpon>
+    </None>
+    <None Include="DessySoftDataSet29.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DessySoftDataSet29.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DessySoftDataSet29.xss">
+      <DependentUpon>DessySoftDataSet29.xsd</DependentUpon>
+    </None>
+    <None Include="DessySoftDataSet3.xsc">
+      <DependentUpon>DessySoftDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="DessySoftDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DessySoftDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DessySoftDataSet3.xss">
+      <DependentUpon>DessySoftDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="DessySoftDataSet30.xsc">
+      <DependentUpon>DessySoftDataSet30.xsd</DependentUpon>
+    </None>
+    <None Include="DessySoftDataSet30.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DessySoftDataSet30.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DessySoftDataSet30.xss">
+      <DependentUpon>DessySoftDataSet30.xsd</DependentUpon>
+    </None>
+    <None Include="DessySoftDataSet31.xsc">
+      <DependentUpon>DessySoftDataSet31.xsd</DependentUpon>
+    </None>
+    <None Include="DessySoftDataSet31.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DessySoftDataSet31.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DessySoftDataSet31.xss">
+      <DependentUpon>DessySoftDataSet31.xsd</DependentUpon>
+    </None>
+    <None Include="DessySoftDataSet32.xsc">
+      <DependentUpon>DessySoftDataSet32.xsd</DependentUpon>
+    </None>
+    <None Include="DessySoftDataSet32.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DessySoftDataSet32.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DessySoftDataSet32.xss">
+      <DependentUpon>DessySoftDataSet32.xsd</DependentUpon>
+    </None>
+    <None Include="DessySoftDataSet33.xsc">
+      <DependentUpon>DessySoftDataSet33.xsd</DependentUpon>
+    </None>
+    <None Include="DessySoftDataSet33.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DessySoftDataSet33.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DessySoftDataSet33.xss">
+      <DependentUpon>DessySoftDataSet33.xsd</DependentUpon>
+    </None>
+    <None Include="DessySoftDataSet34.xsc">
+      <DependentUpon>DessySoftDataSet34.xsd</DependentUpon>
+    </None>
+    <None Include="DessySoftDataSet34.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DessySoftDataSet34.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DessySoftDataSet34.xss">
+      <DependentUpon>DessySoftDataSet34.xsd</DependentUpon>
+    </None>
+    <None Include="DessySoftDataSet35.xsc">
+      <DependentUpon>DessySoftDataSet35.xsd</DependentUpon>
+    </None>
+    <None Include="DessySoftDataSet35.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DessySoftDataSet35.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DessySoftDataSet35.xss">
+      <DependentUpon>DessySoftDataSet35.xsd</DependentUpon>
+    </None>
+    <None Include="DessySoftDataSet36.xsc">
+      <DependentUpon>DessySoftDataSet36.xsd</DependentUpon>
+    </None>
+    <None Include="DessySoftDataSet36.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DessySoftDataSet36.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DessySoftDataSet36.xss">
+      <DependentUpon>DessySoftDataSet36.xsd</DependentUpon>
+    </None>
+    <None Include="DessySoftDataSet37.xsc">
+      <DependentUpon>DessySoftDataSet37.xsd</DependentUpon>
+    </None>
+    <None Include="DessySoftDataSet37.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DessySoftDataSet37.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DessySoftDataSet37.xss">
+      <DependentUpon>DessySoftDataSet37.xsd</DependentUpon>
+    </None>
+    <None Include="DessySoftDataSet38.xsc">
+      <DependentUpon>DessySoftDataSet38.xsd</DependentUpon>
+    </None>
+    <None Include="DessySoftDataSet38.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DessySoftDataSet38.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DessySoftDataSet38.xss">
+      <DependentUpon>DessySoftDataSet38.xsd</DependentUpon>
+    </None>
+    <None Include="DessySoftDataSet39.xsc">
+      <DependentUpon>DessySoftDataSet39.xsd</DependentUpon>
+    </None>
+    <None Include="DessySoftDataSet39.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DessySoftDataSet39.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DessySoftDataSet39.xss">
+      <DependentUpon>DessySoftDataSet39.xsd</DependentUpon>
+    </None>
+    <None Include="DessySoftDataSet4.xsc">
+      <DependentUpon>DessySoftDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="DessySoftDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DessySoftDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DessySoftDataSet4.xss">
+      <DependentUpon>DessySoftDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="DessySoftDataSet5.xsc">
+      <DependentUpon>DessySoftDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="DessySoftDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DessySoftDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DessySoftDataSet5.xss">
+      <DependentUpon>DessySoftDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="DessySoftDataSet6.xsc">
+      <DependentUpon>DessySoftDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="DessySoftDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DessySoftDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DessySoftDataSet6.xss">
+      <DependentUpon>DessySoftDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="DessySoftDataSet7.xsc">
+      <DependentUpon>DessySoftDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="DessySoftDataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DessySoftDataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DessySoftDataSet7.xss">
+      <DependentUpon>DessySoftDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="DessySoftDataSet8.xsc">
+      <DependentUpon>DessySoftDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="DessySoftDataSet8.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DessySoftDataSet8.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DessySoftDataSet8.xss">
+      <DependentUpon>DessySoftDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="DessySoftDataSet9.xsc">
+      <DependentUpon>DessySoftDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="DessySoftDataSet9.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DessySoftDataSet9.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DessySoftDataSet9.xss">
+      <DependentUpon>DessySoftDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

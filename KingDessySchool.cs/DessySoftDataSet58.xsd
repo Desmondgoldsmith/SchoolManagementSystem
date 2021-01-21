@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DessySoftDataSet58" targetNamespace="http://tempuri.org/DessySoftDataSet58.xsd" xmlns:mstns="http://tempuri.org/DessySoftDataSet58.xsd" xmlns="http://tempuri.org/DessySoftDataSet58.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="DessySoftConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="DessySoftConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.KingDessySchool.cs.Properties.Settings.GlobalReference.Default.DessySoftConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="C1ReportsTableAdapter" GeneratorDataComponentClassName="C1ReportsTableAdapter" Name="C1Reports" UserDataComponentName="C1ReportsTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="DessySoftConnectionString (Settings)" DbObjectName="DessySoft.dbo.C1Reports" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT StdName, Grade, MGrade, SGrade, SSGrade, FrGrade, TwGrade FROM dbo.C1Reports</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="StdName" DataSetColumn="StdName" />
+              <Mapping SourceColumn="Grade" DataSetColumn="Grade" />
+              <Mapping SourceColumn="MGrade" DataSetColumn="MGrade" />
+              <Mapping SourceColumn="SGrade" DataSetColumn="SGrade" />
+              <Mapping SourceColumn="SSGrade" DataSetColumn="SSGrade" />
+              <Mapping SourceColumn="FrGrade" DataSetColumn="FrGrade" />
+              <Mapping SourceColumn="TwGrade" DataSetColumn="TwGrade" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DessySoftDataSet58" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="DessySoftDataSet58" msprop:Generator_UserDSName="DessySoftDataSet58">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="C1Reports" msprop:Generator_TableClassName="C1ReportsDataTable" msprop:Generator_TableVarName="tableC1Reports" msprop:Generator_TablePropName="C1Reports" msprop:Generator_RowDeletingName="C1ReportsRowDeleting" msprop:Generator_RowChangingName="C1ReportsRowChanging" msprop:Generator_RowEvHandlerName="C1ReportsRowChangeEventHandler" msprop:Generator_RowDeletedName="C1ReportsRowDeleted" msprop:Generator_UserTableName="C1Reports" msprop:Generator_RowChangedName="C1ReportsRowChanged" msprop:Generator_RowEvArgName="C1ReportsRowChangeEvent" msprop:Generator_RowClassName="C1ReportsRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="StdName" msprop:Generator_ColumnVarNameInTable="columnStdName" msprop:Generator_ColumnPropNameInRow="StdName" msprop:Generator_ColumnPropNameInTable="StdNameColumn" msprop:Generator_UserColumnName="StdName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Grade" msprop:Generator_ColumnVarNameInTable="columnGrade" msprop:Generator_ColumnPropNameInRow="Grade" msprop:Generator_ColumnPropNameInTable="GradeColumn" msprop:Generator_UserColumnName="Grade">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MGrade" msprop:Generator_ColumnVarNameInTable="columnMGrade" msprop:Generator_ColumnPropNameInRow="MGrade" msprop:Generator_ColumnPropNameInTable="MGradeColumn" msprop:Generator_UserColumnName="MGrade">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SGrade" msprop:Generator_ColumnVarNameInTable="columnSGrade" msprop:Generator_ColumnPropNameInRow="SGrade" msprop:Generator_ColumnPropNameInTable="SGradeColumn" msprop:Generator_UserColumnName="SGrade">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SSGrade" msprop:Generator_ColumnVarNameInTable="columnSSGrade" msprop:Generator_ColumnPropNameInRow="SSGrade" msprop:Generator_ColumnPropNameInTable="SSGradeColumn" msprop:Generator_UserColumnName="SSGrade">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FrGrade" msprop:Generator_ColumnVarNameInTable="columnFrGrade" msprop:Generator_ColumnPropNameInRow="FrGrade" msprop:Generator_ColumnPropNameInTable="FrGradeColumn" msprop:Generator_UserColumnName="FrGrade">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TwGrade" msprop:Generator_ColumnVarNameInTable="columnTwGrade" msprop:Generator_ColumnPropNameInRow="TwGrade" msprop:Generator_ColumnPropNameInTable="TwGradeColumn" msprop:Generator_UserColumnName="TwGrade">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

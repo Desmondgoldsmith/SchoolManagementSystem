@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DessySoftDataSet94" targetNamespace="http://tempuri.org/DessySoftDataSet94.xsd" xmlns:mstns="http://tempuri.org/DessySoftDataSet94.xsd" xmlns="http://tempuri.org/DessySoftDataSet94.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="DessySoftConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="DessySoftConnectionString1 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.KingDessySchool.cs.Properties.Settings.GlobalReference.Default.DessySoftConnectionString1" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="NewGrade1TableAdapter" GeneratorDataComponentClassName="NewGrade1TableAdapter" Name="NewGrade1" UserDataComponentName="NewGrade1TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="DessySoftConnectionString1 (Settings)" DbObjectName="DessySoft.dbo.NewGrade1" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT FirstName, LastName, Classx, Teacher FROM dbo.NewGrade1</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="FirstName" DataSetColumn="FirstName" />
+              <Mapping SourceColumn="LastName" DataSetColumn="LastName" />
+              <Mapping SourceColumn="Classx" DataSetColumn="Classx" />
+              <Mapping SourceColumn="Teacher" DataSetColumn="Teacher" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DessySoftDataSet94" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="DessySoftDataSet94" msprop:Generator_UserDSName="DessySoftDataSet94">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="NewGrade1" msprop:Generator_TableClassName="NewGrade1DataTable" msprop:Generator_TableVarName="tableNewGrade1" msprop:Generator_TablePropName="NewGrade1" msprop:Generator_RowDeletingName="NewGrade1RowDeleting" msprop:Generator_RowChangingName="NewGrade1RowChanging" msprop:Generator_RowEvHandlerName="NewGrade1RowChangeEventHandler" msprop:Generator_RowDeletedName="NewGrade1RowDeleted" msprop:Generator_UserTableName="NewGrade1" msprop:Generator_RowChangedName="NewGrade1RowChanged" msprop:Generator_RowEvArgName="NewGrade1RowChangeEvent" msprop:Generator_RowClassName="NewGrade1Row">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="FirstName" msprop:Generator_ColumnVarNameInTable="columnFirstName" msprop:Generator_ColumnPropNameInRow="FirstName" msprop:Generator_ColumnPropNameInTable="FirstNameColumn" msprop:Generator_UserColumnName="FirstName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="LastName" msprop:Generator_ColumnVarNameInTable="columnLastName" msprop:Generator_ColumnPropNameInRow="LastName" msprop:Generator_ColumnPropNameInTable="LastNameColumn" msprop:Generator_UserColumnName="LastName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Classx" msprop:Generator_ColumnVarNameInTable="columnClassx" msprop:Generator_ColumnPropNameInRow="Classx" msprop:Generator_ColumnPropNameInTable="ClassxColumn" msprop:Generator_UserColumnName="Classx">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Teacher" msprop:Generator_ColumnVarNameInTable="columnTeacher" msprop:Generator_ColumnPropNameInRow="Teacher" msprop:Generator_ColumnPropNameInTable="TeacherColumn" msprop:Generator_UserColumnName="Teacher">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
